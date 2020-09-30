@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+.project-grid {
+    display: grid;
+    grid-template-rows: 400px 400px;
+    grid-template-columns: 620px 620px;
+    row-gap: 12px;
+    column-gap: 12px;
+    top: 2500px;
+    margin-bottom: 300px;
+    left: calc(50% - 620px);
+    position: absolute;
+}
+
+#aboutme-ts{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: relative;
+    float: right;
+    bottom: 30px;
+    left: -300px;
+}
+
+.project-grid img{
+    width: 620px;
+    height: 400px;
+}
+
+.project-grid img:hover{
+    cursor: pointer;
+}
+
+
+/* .project-grid > span:hover{
+    background: white;
+} */
+
+.project-grid > div{
+    width: 620px;
+    height: 400px;
+}
+
+#tech-stack{
+    list-style: none;
+    margin-left: -48px;
+}
+.stack-header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#tech-stack li {
+    display: inline;
+    padding: 9px;
+}
+#tech-stack ul {
+    display: inline;
+    padding: 9px;
+}
+#tech-stack img {
+   width: 50px;
+   height: 50px; 
+}
+.aboutme-content {
+    position: absolute;
+    width : 1000px;
+    bottom: -1000px;
+    left: 37%;
+}
+
+.aboutme-content p, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.start-content {
+    position: absolute;
+    color: black;
+    top: 45%;
+    left: 45%;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project{
+    position: absolute;
+    margin-bottom: 300px;
+}
+
+.project p, a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+.login-info{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 17px;
+    margin-top: 20px;
+    line-height: 30px;
+    padding-left: 10px;
+    background: linear-gradient(90deg, #9E9E9E, #7D7D7D);
+}
+
+.project{
+    bottom: -2250px;
+    left: 58%;
+}
+.project-header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+.live-link > a{
+    text-decoration: none;
+}
+.side-image{
+    width : 620px;
+    height: 400px;
+    position: absolute;
+    top: 50px;
+    left: -700px;
+}
+
+#tictactoe{
+    bottom: -2170px;
+}
+
+.side-image:hover{
+    cursor: pointer;
+}
+
+#photo-grid{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 220px 220px;
+    position: absolute;
+    margin-left: -141%;
+}
+#journal-side{
+    width : 320px;
+    height: 200px;
+}
+#journal-side:hover{
+    cursor: pointer;
+}
+#journal-right{
+    width : 310px;
+    height: 200px;
+}
+#diagram{
+    width : 380px;
+    height: 400px;
+}
+.github-link{
+    width: 45px;
+    height: 45px;
+}
+nav{
+    position: static;
+    padding: 15px;
+    background-color: grey;
+}
+#top-left{
+    float: left;
+}
+
+#item-one{
+    float: right;
+    padding-left : 100px;
+}
+#item-two{
+    float: right;
+}

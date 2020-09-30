@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="top-left">
+            Ben Purvis
+        </div>
+        <div id="item-one">
+            About me
+        </div>
+        <div id="item-two">
+            Projects
+        </div>
+    </nav>
+    <div class="start-content page-index-1">
+        Hello World I'm Ben Purvis. <br>
+        Welcome to my portfolio.
+        <div id="bottom-direction">
+            <button id="to-aboutme">
+                Next page
+            </button>
+        </div>
+    </div>
+    <div class="aboutme-content">
+        <div id="aboutme-ts">
+            <h3>My Tech Stack:</h3>
+            <ul>
+                <li>
+                    React
+                </li>
+                <li>
+                    Ruby on Rails
+                </li>
+                <li>
+                    Javascript
+                </li>
+                <li>
+                    Django with Python
+                </li>
+                <li>
+                    C#
+                </li>
+                <li>
+                    Java
+                </li>
+            </ul>
+        </div>
+        <h2>My Synopsis</h2>
+        <p>
+            Hi I'm glad you've come to my portfolio. <br>
+            I'm a Full Stack Sofware developer who is always <br>
+            hunting for what I call the lightbulb moment. It's when <br>
+            you figure out a solution to your problem and you get a spur <br>
+            of happiness from watching that feature YOU BUILT come alive.
+        </p>
+
+
+        <button id="to-projects">
+            Next page
+        </button>
+    </div>
+    <div class="project-grid">
+        <img id="bopper-item" src="assets/bopper.png" onmouseover="this.src='assets/bopperhoverimg.png'" onmouseout="this.src='assets/bopper.png'" alt="bopper grid item">
+        <img id="tictactoe-item" src="assets/tictactoe.png" onmouseover="this.src='assets/tictactoehoverimg.png'"  onmouseout="this.src='assets/tictactoe.png'" alt="tictactoe grid item" >
+        <img id="twatch-item" src="assets/twatch.png" onmouseover="this.src='assets/twatchhoverimg.png'"  onmouseout="this.src='assets/twatch.png'"  alt="twatch grid item">
+        <img id="journal-item" src="assets/journal.png" onmouseover="this.src='assets/journalhoverimage.png'"  onmouseout="this.src='assets/journal.png'" alt="journal grid item">
+    </div>
+    <div class="project" id="twatch">
+        <img class="side-image" id="twatch-side" onmouseover="this.src='assets/twatchhoverimg.png'"
+            onmouseout="this.src='assets/twatch.png'" src="assets/twatch.png" alt="tictactoe project image">
+        <h2 class="project-header">
+            Twatch 
+            <a href="https://github.com/burvxs/Twatch-Project01">
+                <img class="github-link" src="assets/github.svg" alt="github project link">
+            </a>
+        </h2>
+        <p>
+            This project I wanted to learn about video streaming <br>
+            and the MVC architecture. I used OpenTok video API to live stream <br>
+            the screen captured video and users can subscribe to a stream <br>
+            with the /watch url. Getting this working was a rollercoaster and <br>
+            it was a joy to see my screen from another device. <br>
+            <a class="live-link" href="https://twatch-live-streaming.herokuapp.com/login">Here's the live site.</a> <br>
+            <div class="login-info">
+                Logins for if you dont want to make an account: <br>
+                <strong>Username:</strong> test_user <br>
+                <strong>Password:</strong> chicken
+            </div>
+        </p>
+        <h2 class="stack-header">Tech Stack:</h2>
+        <ul id="tech-stack">
+            <li>
+                <a href="https://rubyonrails.org/">
+                    <img src="assets/rubyrails.png" alt="ruby on rails logo"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://tokbox.com/developer/sdks/js/">
+                    <img src="assets/vonage.svg" alt="vonage-logo" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.javascript.com/">
+                    <img src="assets/jslogo.svg" alt="javascript yellow logo" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="project" id="journal">
+        <div id="photo-grid">
+            <img id="journal-side"  onmouseover="this.src='assets/journalhoverimage.png'" onmouseout="this.src='assets/journal.png'" src="assets/journal.png" alt="tictactoe project image">
+            <img src="assets/erm.png" id="diagram" alt="diagram photo">
+            <img id="journal-right" src="assets/bopper.png">
+        </div>
+        <h2 class="project-header">
+            Journal
+            <a href="https://github.com/burvxs/journal-frontend">
+                <img class="github-link" src="assets/github.svg" alt="github project link">
+            </a>
+        </h2>
+        <p>
+            My solo react project this one was especially difficult. <br>
+            I learnt so much about scope management and react while working <br>
+            on this project. Even though this isnt my proudest project I now have a <br>
+            functional base application that can be built upon so I can add all my <br>
+            dream features.
+            
+            <div class="live-link">
+                <a href="https://burvxs.github.io/TicTacToe/">
+                    Go and add some tasks!
+                </a>
+            </div>
+        </p>
+        <h2 class="stack-header">Tech Stack:</h2>
+        <ul id="tech-stack">
+            <li>
+                <a href="https://www.javascript.com/">
+                    <img src="assets/jslogo.svg" alt="javascript yellow logo" />
+                </a>
+            </li>
+            <li>
+                <a href="https://jquery.com/">
+                    <img src="assets/jq.png" alt="jqeury logo"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="project" id="tictactoe">
+        <img class="side-image" id="tictactoe-side"  onmouseover="this.src='assets/tictactoehoverimg.png'" onmouseout="this.src='assets/tictactoe.png'" src="assets/tictactoe.png" alt="tictactoe project image">
+        <h2 class="project-header">
+            TicTacToe
+            <a href="https://github.com/burvxs/TicTacToe">
+                <img class="github-link" src="assets/github.svg" alt="github project link">
+            </a>
+        </h2>
+        <p>
+            My TicTacToe project was pretty early on into my General Assembly course. <br>
+            I already had coding experience so this project I really wanted to challenge myself <br>
+            so I learnt the MiniMax and implemented it into the game and <br>
+            low and behold I birthed a sentient AI... <br>
+            No no I'm kidding I promise! it just verses the human player.<br>
+    
+            it can be pretty hard to beat.
+        <div class="live-link">
+            <a href="https://burvxs.github.io/TicTacToe/">
+                Give it a try!
+            </a>
+        </div>
+        </p>
+        <h2 class="stack-header">Tech Stack:</h2>
+        <ul id="tech-stack">
+            <li>
+                <a href="https://www.javascript.com/">
+                    <img src="assets/jslogo.svg" alt="javascript yellow logo" />
+                </a>
+            </li>
+            <li>
+                <a href="https://jquery.com/">
+                    <img src="assets/jq.png" alt="jqeury logo" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="project" id="bopper">
+        <img class="side-image" id="bopper-side"  onmouseover="this.src='assets/bopperhoverimg.png'" onmouseout="this.src='assets/bopper.png'" src="assets/bopper.png" alt="bopper project image">
+        <h2 class="project-header">
+            Bopper
+            <a href="https://github.com/dphlai/bopper">
+                <img class="github-link" src="assets/github.svg" alt="github project link">
+            </a>
+        </h2>
+        <p>
+            A platformer where the aim of the game is collecting <br>
+            coins and beating other players high scores. <br>
+            This game features a random level generator so when <br>
+            you get bored click the Generate New Map button and boom! <br>
+            a whole new level for you to enjoy.
+            <div class="live-link">
+                <a href="https://burvxs.github.io/TicTacToe/">
+                    Here's the game. Don't get to hooked!
+                </a>
+            </div>
+            <div class="login-info">
+                Logins for if you dont want to make an account: <br>
+                <strong>Username:</strong> test_user <br>
+                <strong>Password:</strong> chicken
+            </div>
+        </p>
+        <h2 class="stack-header">Tech Stack:</h2>
+        <ul id="tech-stack">
+            <li>
+                <a href="https://rubyonrails.org/">
+                    <img src="assets/rubyrails.png" alt="ruby on rails logo" />
+                </a>
+            </li>
+            <li>
+                <a href="https://phaser.io/phaser3">
+                    <img src="assets/phaser.png" alt="phaser three logo" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.javascript.com/">
+                    <img src="assets/jslogo.svg" alt="javascript yellow logo" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
