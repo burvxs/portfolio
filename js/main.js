@@ -6,7 +6,7 @@ $(document).ready(function(){
     let twatch = $("#twatch");
     let journal = $("#journal");
     $(".project").hide();
-
+    dotLoadingAnim();
     $("#to-aboutme").on("click", function () {
         scrollToCenterElement(".aboutme-content");
     });
@@ -14,6 +14,10 @@ $(document).ready(function(){
     $("#tictactoe-item").on("click", function(){
         $(".project-grid").hide();
         tictactoe.show();
+    })
+
+    $("#item-two").on("click", function(){
+        scrollToCenterElement($(".project-grid"))
     })
 
     $("#bopper-item").on("click", function(){
@@ -52,11 +56,18 @@ $(document).ready(function(){
     })
 });
 
-function scrollToCenterElement(target){
-    const scrollToIndex = $(target).offset().top - $(window).height() / 2 + 150;
+function scrollToCenterElement(target, offset = 380){
+    const scrollToIndex = $(target).offset().top - $(window).height() / 2 + offset;
     $("body").scrollTo(scrollToIndex, 1000);
 }
 
-function hideAllProjects(){
- 
+function dotLoadingAnim(){
+    setInterval(function(){
+        let wait = $("#wait");
+        if(wait.html().length > 2){
+            wait.html('');
+        }else{
+            wait.append(".")
+        }
+    }, 300)
 }
