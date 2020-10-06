@@ -1,4 +1,4 @@
-
+const WELCOME_TEXT = "Welcome to my portfolio"
 
 $(document).ready(function(){
     let bopper = $("#bopper");
@@ -6,7 +6,9 @@ $(document).ready(function(){
     let twatch = $("#twatch");
     let journal = $("#journal");
     $(".project").hide();
-    dotLoadingAnim();
+
+    initStartContent();
+
     $("#to-aboutme").on("click", function () {
         scrollToCenterElement(".aboutme-content");
     });
@@ -61,13 +63,49 @@ function scrollToCenterElement(target, offset = 380){
     $("body").scrollTo(scrollToIndex, 1000);
 }
 
-function dotLoadingAnim(){
-    setInterval(function(){
-        let wait = $("#wait");
-        if(wait.html().length > 2){
-            wait.html('');
-        }else{
-            wait.append(".")
-        }
-    }, 300)
+function dotLoadingAnim(isDotting = true){
+    if(isDotting){
+        setInterval(dotInterval, 300);
+    }else{
+        clearInterval(dotInterval);
+    }
+}
+
+function dotInterval(){
+    let wait = $("#wait");
+    if (wait.html() === undefined) return;
+
+    if (wait.html().length > 2) {
+        wait.html("");
+    } else {
+        wait.append(".");
+    }
+}
+
+function initStartContent(){
+    dotLoadingAnim();
+    const chars = WELCOME_TEXT.split("");
+    isDotting = false;
+    let index = 0;
+
+    setTimeout(function () {
+        $("#start-text").empty();
+        let intervalTextWriter = setInterval(() => {
+            $("#start-text").append(chars[index]);
+            index++;
+            if(index > chars.length){
+                clearInterval(intervalTextWriter);
+                scrollToCenterElement(".aboutme-content", 150);
+            }                                  
+        }, 150);
+    }, 3000);
+    console.log(index);
+    if (index > chars.length){
+        clearInterval(intervalTextWriter);
+    }
+}
+
+function intervalTextWriter(incrementor, charArray) {
+    $("#start-text").append(charArray[incrementor]);
+    incrementor++;
 }
