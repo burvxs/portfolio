@@ -6,6 +6,7 @@ $(document).ready(function(){
     let twatch = $("#twatch");
     let journal = $("#journal");
 
+    let closeModal = $("#modal-close")
     let openModal = $("#contact");
     let modal = $("#modal");
 
@@ -15,6 +16,10 @@ $(document).ready(function(){
 
     openModal.on("click", function(){
         modal.css("display", "block");
+    });
+
+    closeModal.on("click", function(){
+        modal.css("display", "none");
     });
 
     $("#to-aboutme").on("click", function () {

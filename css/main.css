@@ -41,7 +41,7 @@ body {
     margin-left: -48px;
 }
 .stack-header{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inconsolata', monospace;
 }
 #tech-stack li {
     display: inline;
@@ -81,7 +81,7 @@ body {
 }
 
 .project p, a{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-size: 17px;
 }
 .login-info{
@@ -99,7 +99,7 @@ body {
     left: 58%;
 }
 .project-header{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-size: 50px;
 }
 .live-link > a{
@@ -125,8 +125,9 @@ body {
     display: grid;
     grid-template-columns: 300px 300px;
     grid-template-rows: 220px 220px;
+    column-gap: 15px;
     position: absolute;
-    margin-left: -141%;
+    margin-left: -120%;
 }
 #journal-side{
     width : 320px;
@@ -149,8 +150,8 @@ body {
 }
 nav{
     position: fixed;
-    font-size: 22px;
-    font-family: 'Teko', sans-serif;
+    font-size: 18px;
+    font-family: 'Inconsolata', sans-serif;
     width: 100%;
     padding: 15px;
     background-color: #D0D0D0;
@@ -182,6 +183,7 @@ nav{
 /* -------- MODAL ---------- */
 #modal{
     display: none;
+    font-family: 'Inconsolata', monospace;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -199,10 +201,38 @@ nav{
     border: 1px solid #888;
     border-radius: 15px;
     width: 40%;
+    height: 15%;
+}
+#contact-text{
+    margin-top: 20px;
+}
+#resume-link{
+    display: inline-block;
+    position: relative;
+    margin-left: 70%;
+    bottom: 55px;
+}
+#resume-btn{
+    position: relative;
+    width: 150px;
+    height: 52px;
+    border: 4px solid #7D7D7D;
+    border-radius: 5px;
+    font-family:  'Inconsolata', monospace;
+}
+#resume-btn:hover{
+    cursor: pointer;
+    background: #e4e4e4;
+}
+#resume-btn:focus{
+    outline: none;
 }
 /* -------- MODAL ---------- */
 
 /* -------- ABOUT ME ---------- */
+#modal-close:hover{
+    cursor: pointer;
+}
 #contact{
     position: relative;
     width: 150px;
