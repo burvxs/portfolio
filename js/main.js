@@ -5,9 +5,17 @@ $(document).ready(function(){
     let tictactoe = $("#tictactoe");
     let twatch = $("#twatch");
     let journal = $("#journal");
+
+    let openModal = $("#contact");
+    let modal = $("#modal");
+
     $(".project").hide();
 
     initStartContent();
+
+    openModal.on("click", function(){
+        modal.css("display", "block");
+    });
 
     $("#to-aboutme").on("click", function () {
         scrollToCenterElement(".aboutme-content");
@@ -19,7 +27,7 @@ $(document).ready(function(){
     })
 
     $("#item-two").on("click", function(){
-        scrollToCenterElement($(".project-grid"))
+        scrollToCenterElement(".project-grid");
     })
 
     $("#bopper-item").on("click", function(){
@@ -95,7 +103,7 @@ function initStartContent(){
             index++;
             if(index > chars.length){
                 clearInterval(intervalTextWriter);
-                scrollToCenterElement(".aboutme-content", 150);
+                scrollToCenterElement(".aboutme-content", 170);
             }                                  
         }, 150);
     }, 3000);
