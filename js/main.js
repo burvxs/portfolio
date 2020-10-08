@@ -13,6 +13,7 @@ $(document).ready(function(){
     $(".project").hide();
 
     initStartContent();
+    switchJournalPhotoGrid();
 
     openModal.on("click", function(){
         modal.css("display", "block");
@@ -105,12 +106,12 @@ function initStartContent(){
     isDotting = false;
     let index = 0;
 
-    setTimeout(function () {
+    setTimeout(function (){
         $("#start-text").empty();
         let intervalTextWriter = setInterval(() => {
             $("#start-text").append(chars[index]);
             index++;
-            if(index > chars.length){
+            if(index > chars.length - 1){
                 clearInterval(intervalTextWriter);
                 scrollToCenterElement(".aboutme-content", 170);
                 // setTimeout(() => {
@@ -119,13 +120,19 @@ function initStartContent(){
             }                                  
         }, 150);
     }, 3000);
-    console.log(index);
     if (index > chars.length){
         clearInterval(intervalTextWriter);
     }
 }
 
-function intervalTextWriter(incrementor, charArray) {
-    $("#start-text").append(charArray[incrementor]);
-    incrementor++;
+function switchJournalPhotoGrid(){
+    if(detectMobile()){
+        $("#photo-grid").remove();
+        $("#journal").prepend(`<img class="side-image" id="journal-side" onmouseover="this.src='assets/journalhoverimage.png'"
+            onmouseout="this.src='assets/journal.png'" src="assets/journal.png" alt="journal project image">`);
+    }
+}
+
+function detectMobile(){
+    return ((window.clientWidth <= 800) && (window.clientHeight <= 600));
 }
