@@ -35,6 +35,10 @@ $(document).ready(function(){
         scrollToCenterElement(".project-grid");
     })
 
+    $("#item-one").on("click", function () {
+        scrollToCenterElement(".aboutme-content", 200);
+    })
+
     $("#bopper-item").on("click", function(){
         $(".project-grid").hide();
         bopper.show();
@@ -109,6 +113,9 @@ function initStartContent(){
             if(index > chars.length){
                 clearInterval(intervalTextWriter);
                 scrollToCenterElement(".aboutme-content", 170);
+                // setTimeout(() => {
+                //     $("#start-content-wrapper").hide();
+                // }, 1200);
             }                                  
         }, 150);
     }, 3000);
