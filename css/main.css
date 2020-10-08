@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    width: 100%;
+    height : 100%;
     background-color: #e4e4e4;
 }
 .project-grid {
@@ -47,6 +49,9 @@ body {
     display: inline;
     padding: 9px;
 }
+#tech-stack a {
+    text-decoration: none;
+}
 #tech-stack ul {
     display: inline;
     padding: 9px;
@@ -58,8 +63,8 @@ body {
 
 #start-content-wrapper{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     background: #181818;
 }
 #start-text{
@@ -72,7 +77,6 @@ body {
     top: 45%;
     left: 45%;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .project{
@@ -293,3 +297,38 @@ nav{
     width : 100%;
 }
 /* -------- ABOUT ME ---------- */
+
+/* -------- MOBILE RESPONSE ---------- */
+@media only screen and (max-width: 600px){
+    body, html{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    nav{
+        max-width: 375px;
+    }
+    #start-content{
+        width: 100%;
+    }
+    #start-text{
+        font-size: 18px;
+        text-align: center;
+    }
+    .project-grid{
+        display: grid;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-columns: 310px;
+        row-gap: 12px;
+        column-gap: 12px;
+        top: 2500px;
+        margin-bottom: 300px;
+        left: 10%;
+        position: absolute;
+    }
+    .project-grid img{
+        width: 375px;
+        height: 200px;
+    }
+
+}
+/* -------- MOBILE RESPONSE ---------- */
