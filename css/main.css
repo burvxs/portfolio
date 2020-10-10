@@ -400,7 +400,7 @@ nav{
     #ts-table{
         position: relative;
         display: grid;
-        width: 400px;
+        width: 300px;
         bottom: 460px;
         left: 12%;
         grid-template-columns: 50px 50px 50px 50px 50px;

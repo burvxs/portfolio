@@ -80,15 +80,31 @@ $(document).ready(function(){
     })
 
     const vanillaBopper = document.querySelector("#bopper-item");
-
+    const vanillaBopperSideImage = document.querySelector("")
+    let isBopperDisplayed = false;
     if(detectMobile()){
-        vanillaBopper.addEventListener("touchmove", function(e){
-            const target = e.target;
-            const $target = $(target);
-            $target.attr("src", "assets/bopperhoverimg.png");
+        vanillaBopper.addEventListener("touchstart", function(e){
+            switchProjectImage($(e.target), "TEXT");
         }, {passive : true})
+        vanillaBopper.addEventListener("touchend", function (e) {
+            switchProjectImage($(e.target), "NORMAL");
+            $(".project-grid").hide();
+            bopper.show();
+        }, { passive: true })
     }
 });
+
+const switchProjectImage = (target, mode)  => {
+    switch(mode){
+        case "TEXT" : 
+            target.attr("src", "assets/bopperhoverimg.png");
+        case "NORMAL":
+            target.attr("src", "assets/bopper.png");
+        break;
+        default: 
+            target.attr("src", "assets/bopper.png");
+    }
+}
 
 function scrollToCenterElement(target, offset = DESKTOP_PROJECT_GRID_SCROLL_OFFSET){
     const scrollToIndex = $(target).offset().top - $(window).height() / 2 + offset;
