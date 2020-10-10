@@ -37,7 +37,7 @@ $(document).ready(function(){
     })
 
     $("#item-two").on("click", function(){
-        scrollToCenterElement(".aboutme-content", DESKTOP_ABOUT_ME_SCROLL_OFFSET);
+        scrollToCenterElement(".aboutme-content", ABOUT_ME_SCROLL_OFFSET);
     })
 
     $("#item-one").on("click", function () {
@@ -80,26 +80,34 @@ $(document).ready(function(){
     })
 
     const vanillaBopper = document.querySelector("#bopper-item");
-    const vanillaBopperSideImage = document.querySelector("")
+    const vanillaTicTacToe = document.querySelector("#tictactoe-item");
     let isBopperDisplayed = false;
     if(detectMobile()){
         vanillaBopper.addEventListener("touchstart", function(e){
-            switchProjectImage($(e.target), "TEXT");
+            switchProjectImage($(e.target), "TEXT", "assets/bopperhoverimg.png");
         }, {passive : true})
         vanillaBopper.addEventListener("touchend", function (e) {
-            switchProjectImage($(e.target), "NORMAL");
+            switchProjectImage($(e.target), "NORMAL", "assets/bopper.png");
             $(".project-grid").hide();
             bopper.show();
+        }, { passive: true })
+        vanillaTicTacToe.addEventListener("touchstart", function (e) {
+            switchProjectImage($(e.target), "TEXT", 'assets/tictactoehoverimg.png');
+        }, { passive: true })
+        vanillaTicTacToe.addEventListener("touchend", function (e) {
+            switchProjectImage($(e.target), "NORMAL", 'assets/tictactoe.png');
+            $(".project-grid").hide();
+            tictactoe.show();
         }, { passive: true })
     }
 });
 
-const switchProjectImage = (target, mode)  => {
+const switchProjectImage = (target, mode, normalPath, textPath)  => {
     switch(mode){
         case "TEXT" : 
-            target.attr("src", "assets/bopperhoverimg.png");
+            target.attr("src", textPath);
         case "NORMAL":
-            target.attr("src", "assets/bopper.png");
+            target.attr("src", normalPath);
         break;
         default: 
             target.attr("src", "assets/bopper.png");
