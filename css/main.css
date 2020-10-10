@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
 
 body {
     margin: 0;
-    width: 100%;
-    height : 100%;
     background-color: #e4e4e4;
 }
 .project-grid {
@@ -14,7 +13,7 @@ body {
     grid-template-columns: 620px 620px;
     row-gap: 12px;
     column-gap: 12px;
-    top: 2500px;
+    top: 2450px;
     margin-bottom: 300px;
     left: calc(50% - 620px);
     position: absolute;
@@ -241,8 +240,8 @@ nav{
     position: relative;
     width: 150px;
     height: 52px;
-    bottom: 500px;
-    left: 49.2%;
+    bottom: -7px;
+    left: 35.2%;
     border: 4px solid #7D7D7D;
     border-radius: 5px;
     font-family:  'Inconsolata', monospace;
@@ -270,7 +269,7 @@ nav{
     position: absolute;
     margin-left: 20%;
     text-align: center;
-    bottom: 550px;
+    bottom: 800px;
     width: 400px;
 }
 #bottom-text{
@@ -284,17 +283,48 @@ nav{
 #sub-title{
     font-family: 'Inconsolata', monospace;
 }
-#aboutme-ts{
+#aboutme-outside{
     font-family: 'Inconsolata', monospace;
     position: relative;
-    font-size: 20px;
+    font-size: 14px;
+    bottom: 600px;
+    margin-left: 65%;
+}
+#aboutme-work{
+    font-family: 'Inconsolata', monospace;
+    position: relative;
+    font-size: 14px;
     bottom: 580px;
     margin-left: 65%;
 }
 .aboutme-content {
     position: absolute;
-    bottom: -1250px;
+    left: -3.3%;
+    bottom: -1500px;
     width : 100%;
+}
+#ts-table{
+    position: relative;
+    display: grid;
+    width: 1000px;
+    left: 35%;
+    bottom: 400px;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    row-gap: 22px;
+    column-gap: 100px;
+}
+#ts-header {
+    font-family: 'Bebas Neue', cursive;
+    position: absolute;
+    top: 35%;
+    right: 58%;
+    bottom : 70%;
+    text-align: center;
+}
+#ts-table img {
+    max-width : 50px;
+    max-height : 50px;
 }
 /* -------- ABOUT ME ---------- */
 
@@ -307,16 +337,17 @@ nav{
         max-width: 400px;
     }
     #top-right{
-        margin-right: 6%;
+        margin-right: 10%;
     }
     #item-one{
-        padding-right : 10px;
+        padding-right : 5px;
     }
     #item-two{
-        padding-right: 10px;
+        padding-right: 20px;
+        letter-spacing: -0.01px;
     }
     #top-left{
-        padding-left: 10px;
+        padding-left: 15px;
     }
     .start-content{
         left: 25%;
@@ -331,13 +362,10 @@ nav{
         grid-template-columns: 310px;
         row-gap: 12px;
         column-gap: 12px;
-        top: 2500px;
+        top: 2950px;
         margin-bottom: 300px;
         left: 0%;
         position: absolute;
-    }
-    .aboutme-content{
-        left: -3%;
     }
     #headshot{
         top: 10px;
@@ -350,10 +378,39 @@ nav{
         text-align: center;
         max-width: 300px;
     }
-    #contact{
+    #aboutme-outside{
+        text-align: center;
+        right: 50%;
+        top: 180px;
+        width : 300px;
+        height: 200px;
+    }
+    #aboutme-work{
+        text-align: center;
+        right: 50%;
+        top: 200px;
+        width : 300px;
+        height: 200px;
+    }
+    #ts-header{
+        font-family: 'Bebas Neue', cursive;
+        left: 5.5%;
+        top: 508px;
+    }
+    #ts-table{
         position: relative;
-        margin-left: -15%;
-        top: -379px;
+        display: grid;
+        width: 400px;
+        bottom: 460px;
+        left: 12%;
+        grid-template-columns: 50px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px;
+        row-gap: 22px;
+        column-gap: 20px;
+    }
+    #ts-table img {
+        height: 32px;
+        width: 32px;
     }
     .project-grid img{
         width: 375px;
@@ -367,7 +424,8 @@ nav{
     .project{
         text-align: center;
         position: absolute;
-        margin-bottom: 300px;
+        top: 2950px;
+        margin-bottom: 10px;
         left: 0%;
     }
 
@@ -375,7 +433,10 @@ nav{
         font-family: 'Inconsolata', monospace;
         font-size: 14px;
     }
-
+    #switcher:active{
+        z-index: 1;
+        background: url("../assets/bopper.png");
+    }
     .stack-header{
         font-family: 'Inconsolata', monospace;
         font-size: large;
@@ -423,9 +484,13 @@ nav{
 
     #modal-content{
         margin-top: 70%;
-        margin-left: 7%;
-        width: 79%;
+        margin-left: 1%;
+        width: 75%;
         height: 20%;
+    }
+    #ts-nodejs{
+        width : 100px !important;
+        transform: translateX(-5px);
     }
 
     #resume-btn{

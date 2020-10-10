@@ -15,16 +15,12 @@
             Ben Purvis
         </div>
         <div id="top-right">
-            <div id="item-one">
-                About me
-            </div>
-            <div id="item-two">
+            <div id="item-one">    
                 Projects
             </div>
-
-            <a href="javascript:void(0)" class="icon" onclick="dropdownMenu()">
-                <i class="hamburger"></i>
-            </a>
+            <div id="item-two">
+                About me
+            </div>
         </div>
     </nav>
     <div id="start-content-wrapper">
@@ -34,43 +30,61 @@
     </div>
     <div class="aboutme-content">
         <img id="headshot" src="assets/cropped.png" alt="Ben Purvis - Headshot">
-        <div id="aboutme-ts">
-            <h3>My Tech Stack:</h3>
-            <ul>
-                <li>
-                    React
-                </li>
-                <li>
-                    Ruby on Rails
-                </li>
-                <li>
-                    Javascript
-                </li>
-                <li>
-                    Django with Python
-                </li>
-                <li>
-                    C#
-                </li>
-                <li>
-                    Java
-                </li>
-            </ul>
+        <div id="content-wrapper">
+            <div id="aboutme-outside">
+                <h3>What do I get up to outside of work?</h3>
+                <p>
+                    I really love experimenting with different aspects <br>
+                    of coding, for example game development and messing <br>
+                    around with unity and C#. I also play video games, watch anime, <br>
+                    and work on business endevours. I'm definitely a thrill seeker! <br>
+                    I love places like Wattamolla, Bents Basin, places that get the <br>
+                    adrenaline pumping.
+                </p>
+            </div>
+            <div id="aboutme-work">
+                <h3>What to expect of me inside of work</h3>
+                <p>
+                    I'm a productive employee of the business I'm working at. <br>
+                    I've been told I'm a valued worker, and that my boss won't find another <br>
+                    labourer like me. I take a lot of pride in whatever I'm working on, <br>
+                    whether that's building a fence, or an application, I love seeing my work <br>
+                    come to life.
+                </p>
+            </div>
         </div>
         <div id="whoami">
             <h2 id="title">Who am I?</h2>
             <h3><strong id="sub-title">I'm Ben Purvis a Full Stack Developer from Sydney</strong></h3>
             <p class="content">
-                I realised I had a love for technology when I was 14 and I had a 
-                Xbox 360 RGH (Reset Glitch Hack). It allowed me to tinker with 
-                the system and learn things about the Xbox OS. This was so interseting to me.
-                Fast foward to 2018. I did my Certificate IV in Programming and I found a new love
+                I realised I had a love for technology when I was 14. I had an 
+                Xbox 360 RGH (Reset Glitch Hack) which allowed me to tinker with 
+                the system, and learn things about the Xbox OS. This was so interseting to me.
+                Fast foward to 2018, I did my Certificate IV in Programming and I found a new love
                 coding. <br>
             </p>
             <strong id="bottom-text">
-                Now after two years of coding I've grasped the concepts and am ready to be a great
+                Now after two years of coding, I've grasped the concepts, and am ready to be a great
                 asset to your company.
             </strong>
+        </div>
+        <h3 id="ts-header">My Tech Stack</h3>
+        <div id="ts-table">
+            <img src="assets/react.png" alt="react icon">            
+            <img src="assets/jslogo.svg" alt="javascript icon">                            
+            <img id="ts-nodejs" src="assets/nodejs.png" alt="node.js icon">                            
+            <img src="assets/ruby.png" alt="javascript icon">                        
+            <img src="assets/rubyrails.png" alt="ruby on rails icon">
+            <img src="assets/python.png" alt="python icon">
+            <img src="assets/django.jpg" alt="javascript icon">
+            <img src="assets/WPF.png" alt="javascript icon">
+            <img src="assets/winforms.png" alt="javascript icon">
+            <img src="assets/csharp.png" alt="javascript icon">
+            <img src="assets/java.png" alt="python icon">
+            <img src="assets/unity.webp" alt="javascript icon">
+            <img src="assets/jq.png" alt="javascript icon">
+            <img src="assets/android.png" alt="javascript icon">
+            <img src="assets/html.webp" alt="javascript icon">
         </div>
         <div id="modal">
             <div id="top-color"></div>
@@ -103,10 +117,14 @@
         </button>
     </div>
     <div class="project-grid">
-        <img id="bopper-item" src="assets/bopper.png" onmouseover="this.src='assets/bopperhoverimg.png'" onmouseout="this.src='assets/bopper.png'" alt="bopper grid item">
-        <img id="tictactoe-item" src="assets/tictactoe.png" onmouseover="this.src='assets/tictactoehoverimg.png'"  onmouseout="this.src='assets/tictactoe.png'" alt="tictactoe grid item" >
-        <img id="twatch-item" src="assets/twatch.png" onmouseover="this.src='assets/twatchhoverimg.png'"  onmouseout="this.src='assets/twatch.png'"  alt="twatch grid item">
-        <img id="journal-item" src="assets/journal.png" onmouseover="this.src='assets/journalhoverimage.png'"  onmouseout="this.src='assets/journal.png'" alt="journal grid item">
+        <img id="bopper-item" class="project-item" src="assets/bopper.png" onmouseover="this.src='assets/bopperhoverimg.png'" onmouseout="this.src='assets/bopper.png'" alt="bopper grid item">
+        <img id="tictactoe-item" class="project-item" src="assets/tictactoe.png" onmouseover="this.src='assets/tictactoehoverimg.png'"  onmouseout="this.src='assets/tictactoe.png'" alt="tictactoe grid item" >
+        <img id="twatch-item" class="project-item" src="assets/twatch.png" onmouseover="this.src='assets/twatchhoverimg.png'"  onmouseout="this.src='assets/twatch.png'"  alt="twatch grid item">
+        <a href="#" id="switcher">
+            <img id="journal-item" class="project-item" src="assets/journal.png"
+                onmouseover="this.src='assets/journalhoverimage.png'" onmouseout="this.src='assets/journal.png'"
+                alt="journal grid item">
+        </a>
     </div>
     <div class="project" id="twatch">
         <img class="side-image" id="twatch-side" onmouseover="this.src='assets/twatchhoverimg.png'"
@@ -118,14 +136,14 @@
             </a>
         </h2>
         <p>
-            This project I wanted to learn about video streaming <br>
+            For this project I wanted to learn about video streaming <br>
             and the MVC architecture. I used OpenTok video API to live stream <br>
-            the screen captured video and users can subscribe to a stream <br>
+            the screen captured video, and users can subscribe to a stream <br>
             with the /watch url. Getting this working was a rollercoaster and <br>
             it was a joy to see my screen from another device. <br>
             <a class="live-link" href="https://twatch-live-streaming.herokuapp.com/login">Here's the live site.</a> <br>
             <div class="login-info">
-                Logins for if you dont want to make an account: <br>
+                Logins for if you don't want to make an account: <br>
                 <strong>Username:</strong> test_user <br>
                 <strong>Password:</strong> chicken
             </div>
@@ -162,10 +180,10 @@
             </a>
         </h2>
         <p>
-            My solo react project this one was especially difficult. <br>
-            I learnt so much about scope management and react while working <br>
-            on this project. Even though this isnt my proudest project I now have a <br>
-            functional base application that can be built upon so I can add all my <br>
+            This was my React project, and I found this one especially difficult. <br>
+            I learnt so much about scope management and React while working <br>
+            on this project. Even though this isnt my finest work, I now have a <br>
+            functional base application that can be built upon, so I can add all my <br>
             dream features.
             
             <div class="live-link">
@@ -197,11 +215,11 @@
             </a>
         </h2>
         <p>
-            My TicTacToe project was pretty early on into my General Assembly course. <br>
-            I already had coding experience so this project I really wanted to challenge myself <br>
-            so I learnt the MiniMax and implemented it into the game and <br>
-            low and behold I birthed a sentient AI... <br>
-            No no I'm kidding I promise! it just verses the human player.<br>
+            My TicTacToe project was early on in my General Assembly course. <br>
+            I already had coding experience, so I wanted to challenge myself <br>
+            by learning the MiniMax algorithm and implementing it into the game. <br>
+            Low and behold I birthed a sentient AI... <br>
+            No no I'm kidding I promise! It just plays against the human player.<br>
     
             it can be pretty hard to beat.
         <div class="live-link">
@@ -233,15 +251,15 @@
             </a>
         </h2>
         <p>
-            A platformer where the aim of the game is collecting <br>
-            coins and beating other players high scores. <br>
+            This is a platformer where the aim of the game is collecting <br>
+            coins and beating other player's high scores. <br>
             This game features a random level generator so when <br>
-            you get bored click the Generate New Map button and boom! <br>
-            a whole new level for you to enjoy.
+            you get bored, just click the 'GENERATE NEW MAP!' button and boom! <br>
+            A whole new level for you to enjoy.
             <div class="live-link">
                 <a href="https://burvxs.github.io/TicTacToe/">
                     Here's the game. Don't get to hooked!
-                </a>
+                </a>  
             </div>
             <div class="login-info">
                 Logins for if you dont want to make an account: <br>
