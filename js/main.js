@@ -5,8 +5,9 @@ const MOBILE_PROJECT_GRID_SCROLL_OFFSET = 350;
 const ABOUT_ME_SCROLL_OFFSET = 327;
 
 $(document).ready(function(){
-    console.log("Hello");
-    console.log($(document).scrollTop());
+    console.log("%cHi thanks for opening up the console...", "color: yellow")
+    console.log("%cPlease click on my details!", "color: blue")
+    console.log("%cI need a job!", "color: red")
     let bopper = $("#bopper");
     let tictactoe = $("#tictactoe");
     let twatch = $("#twatch");
@@ -29,16 +30,16 @@ $(document).ready(function(){
         modal.css("display", "none");
     });
 
-    $("#to-aboutme").on("click", function () {
+    $("#to-aboutme").on("click", function (e) {
         scrollToCenterElement(".aboutme-content");
     });
 
-    $("#tictactoe-item").on("click", function(){
+    $("#tictactoe-item").on("click", function(e){
         $(".project-grid").hide();
         tictactoe.show();
     })
 
-    $("#item-two").on("click", function(){
+    $("#item-two").on("click", function(e){
         scrollToCenterElement(".aboutme-content", ABOUT_ME_SCROLL_OFFSET);
     })
 
@@ -56,7 +57,8 @@ $(document).ready(function(){
         twatch.show();
     })
 
-    $("#journal-item").on("click", function () {
+    $("#journal-item").on("click", function (e) {
+        e.preventDefault();
         $(".project-grid").hide();
         journal.show();
     })
