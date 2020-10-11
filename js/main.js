@@ -5,6 +5,8 @@ const MOBILE_PROJECT_GRID_SCROLL_OFFSET = 350;
 const ABOUT_ME_SCROLL_OFFSET = 327;
 
 $(document).ready(function(){
+    console.log("Hello");
+    console.log($(document).scrollTop());
     let bopper = $("#bopper");
     let tictactoe = $("#tictactoe");
     let twatch = $("#twatch");
@@ -79,39 +81,86 @@ $(document).ready(function(){
         $(".project-grid").show();
     })
 
-    const vanillaBopper = document.querySelector("#bopper-item");
-    const vanillaTicTacToe = document.querySelector("#tictactoe-item");
-    let isBopperDisplayed = false;
+    const bopperItem = $("#bopper-item");
+    const ticTacToeItem = $("#tictactoe-item");
+    const twatchItem = $("#twatch-item");
+    const journalItem = $("#journal-item");
+
     if(detectMobile()){
-        vanillaBopper.addEventListener("touchstart", function(e){
-            switchProjectImage($(e.target), "TEXT", "assets/bopperhoverimg.png");
-        }, {passive : true})
-        vanillaBopper.addEventListener("touchend", function (e) {
-            switchProjectImage($(e.target), "NORMAL", "assets/bopper.png");
-            $(".project-grid").hide();
-            bopper.show();
-        }, { passive: true })
-        vanillaTicTacToe.addEventListener("touchstart", function (e) {
-            switchProjectImage($(e.target), "TEXT", 'assets/tictactoehoverimg.png');
-        }, { passive: true })
-        vanillaTicTacToe.addEventListener("touchend", function (e) {
-            switchProjectImage($(e.target), "NORMAL", 'assets/tictactoe.png');
-            $(".project-grid").hide();
-            tictactoe.show();
-        }, { passive: true })
+        $(document).on("scroll", function(e){
+            onProjectImageScrollOver(bopperItem, ticTacToeItem, twatchItem, journalItem);
+        })
     }
 });
 
-const switchProjectImage = (target, mode, normalPath, textPath)  => {
-    switch(mode){
-        case "TEXT" : 
-            target.attr("src", textPath);
-        case "NORMAL":
-            target.attr("src", normalPath);
-        break;
-        default: 
-            target.attr("src", "assets/bopper.png");
-    }
+const onProjectImageScrollOver = (bopperElement, ticTacToeElement, twatchItem, journalItem) => {
+    onBopperScrollOver(scrollY).then(() => {
+        bopperElement.attr("src", "assets/bopperhoverimg.png")
+    })
+    .catch(() => {
+        bopperElement.attr("src", "assets/bopper.png")
+    })
+
+    onTicTacToeScrollOver(scrollY).then(() => {
+        ticTacToeElement.attr("src", "assets/tictactoehoverimg.png")
+    })
+    .catch(() => {
+        ticTacToeElement.attr("src", "assets/tictactoe.png")
+    })
+
+    onTwatchScrollOver(scrollY).then(() => {
+        twatchItem.attr("src", "assets/twatchhoverimg.png");
+    })
+    .catch(() => {
+        twatchItem.attr("src", "assets/twatch.png");
+    })
+
+    onJournalScrollOver(scrollY).then(() => {
+        journalItem.attr("src", "assets/journalhoverimage.png");
+    })
+    .catch(() => {
+        journalItem.attr("src", "assets/journal.png");
+    })
+}
+
+const onBopperScrollOver = (scrollY) => {
+    return new Promise((resolve, reject) => {
+        if (scrollY >= 2556 && scrollY <= 2781) {
+            resolve();
+        }else{
+            reject()
+        }
+    })
+}
+
+const onTicTacToeScrollOver = (scrollY) => {
+    return new Promise((resolve, reject) => {
+        if(scrollY >= 2781 && scrollY <= 3027){
+            resolve()
+        }else{
+            reject()
+        }
+    })
+}
+
+const onTwatchScrollOver = (scrollY) => {
+    return new Promise((resolve, reject) => {
+        if (scrollY >= 3027 && scrollY <= 3100) {
+            resolve()
+        }else {
+            reject()
+        }
+    })
+}
+
+const onJournalScrollOver = (scrollY) => {
+    return new Promise((resolve, reject) => {
+        if (scrollY >= 3110) {
+            resolve()
+        } else if (scrollY <= 3110) {
+            reject()
+        }
+    })
 }
 
 function scrollToCenterElement(target, offset = DESKTOP_PROJECT_GRID_SCROLL_OFFSET){
