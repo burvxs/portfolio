@@ -395,14 +395,16 @@ nav{
     }
     #ts-header{
         font-family: 'Bebas Neue', cursive;
+        text-align: left;
         left: 5.5%;
-        top: 588px;
+        width: 100%;
+        top: 580px;
     }
     #ts-table{
         position: relative;
         display: grid;
         width: 300px;
-        bottom: 378px;
+        bottom: 365px;
         left: 12%;
         grid-template-columns: 50px 50px 50px 50px 50px;
         grid-template-rows: 50px 50px 50px;
@@ -529,6 +531,7 @@ nav{
         position: absolute;
     }
     #contact{
+        margin-top: 11%;
         margin-left: -13%;
     }
     #ts-table{
@@ -541,6 +544,9 @@ nav{
         grid-template-rows: 50px 50px 50px;
         row-gap: 22px;
         column-gap: 30px;
+    }
+    #ts-header{
+        margin-left: 4%;
     }
     #ts-table img {
         height: 42px;
