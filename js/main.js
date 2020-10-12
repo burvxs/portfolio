@@ -7,12 +7,6 @@ const MOBILE_ABOUT_ME_SCROLL_OFFSET = 300;
 
 
 $(document).ready(function(){
-    console.log("%cIf you're a developer check out mobile view!", "color: lightgreen; background: black;");
-    console.log("%cLink to this project: https://github.com/burvxs/portfolio", "color: lightyellow;");
-    console.log("%cPlease click on my details!", "color: blue; background: yellow");
-    console.log("%cContact me! I love to chat.", "color: blue; background: yellow");
-
-    giveAllATagsTarget();
     let bopper = $("#bopper");
     let tictactoe = $("#tictactoe");
     let twatch = $("#twatch");
@@ -22,10 +16,8 @@ $(document).ready(function(){
     let openModal = $("#contact");
     let modal = $("#modal");
 
-    $(".project").hide();
-
-    initStartContent();
-    switchJournalPhotoGrid();
+    init();
+    if(detectMobile()) initMobile();
 
     openModal.on("click", function(){
         modal.css("display", "block");
@@ -45,7 +37,7 @@ $(document).ready(function(){
     })
 
     $("#item-one").on("click", function () {
-        scrollToCenterElement(".project-grid");
+        scrollToProjectGrid();
     })
 
     $("#bopper-item").on("click", function(){
@@ -83,18 +75,32 @@ $(document).ready(function(){
         journal.hide();
         $(".project-grid").show();
     })
+});
 
+const initMobile = () => {
     const bopperItem = $("#bopper-item");
     const ticTacToeItem = $("#tictactoe-item");
     const twatchItem = $("#twatch-item");
     const journalItem = $("#journal-item");
+    $(document).on("scroll", function (e) {
+        onProjectImageScrollOver(bopperItem, ticTacToeItem, twatchItem, journalItem);
+    })
+}
 
-    if(detectMobile()){
-        $(document).on("scroll", function(e){
-            onProjectImageScrollOver(bopperItem, ticTacToeItem, twatchItem, journalItem);
-        })
-    }
-});
+const init = () => {
+    $(".project").hide();
+    giveAllATagsTarget();
+    initStartContent();
+    switchJournalPhotoGrid();
+    advertisementConsoleLogs();
+}
+
+const advertisementConsoleLogs = () => {
+    console.log("%cIf you're a developer check out mobile view!", "color: lightgreen; background: black;");
+    console.log("%cLink to this project: https://github.com/burvxs/portfolio", "color: lightyellow;");
+    console.log("%cPlease click on my details!", "color: blue; background: yellow");
+    console.log("%cContact me! I love to chat.", "color: blue; background: yellow");
+}
 
 const onProjectImageScrollOver = (bopperElement, ticTacToeElement, twatchItem, journalItem) => {
     onBopperScrollOver(scrollY).then(() => {
