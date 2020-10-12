@@ -41,9 +41,6 @@ body {
     list-style: none;
     margin-left: -48px;
 }
-.stack-header{
-    font-family: 'Inconsolata', monospace;
-}
 #tech-stack li {
     display: inline;
     padding: 9px;
@@ -290,6 +287,10 @@ nav{
     bottom: 600px;
     margin-left: 65%;
 }
+.stack-header{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+}
 #aboutme-work{
     font-family: 'Inconsolata', monospace;
     position: relative;
@@ -432,6 +433,10 @@ nav{
         left: 0%;
     }
 
+    #journal-item{
+        padding-bottom: 300px;
+    }
+
     .project p, a{
         font-family: 'Inconsolata', monospace;
         font-size: 14px;
@@ -441,7 +446,7 @@ nav{
         background: url("../assets/bopper.png");
     }
     .stack-header{
-        font-family: 'Inconsolata', monospace;
+        font-family: 'Bebas Neue', cursive;
         font-size: large;
     }
     #tech-stack li {
