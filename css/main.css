@@ -59,8 +59,8 @@ body {
 
 #start-content-wrapper{
     position: absolute;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     background: #181818;
 }
 #start-text{
@@ -102,7 +102,7 @@ body {
     font-family: 'Inconsolata', monospace;
     font-size: 50px;
 }
-.live-link > a{
+.project-header > a{
     text-decoration: none;
 }
 .side-image{
@@ -524,7 +524,7 @@ nav{
 
 /* -------- IPHONE XS RESPONSE ---------- */
 @media only screen and (max-width: 458px) and (device-height : 896px) {
-   .project-grid{
+    .project-grid{
         display: grid;
         grid-template-rows: 200px 200px 200px 200px;
         grid-template-columns: 310px;
